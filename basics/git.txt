@@ -1,3 +1,4 @@
 git add .   -  добавляет все файлы для отслеживания изменений
 git commit -m 'text'  -  записывает все изменения
 git push ssh-link master/main  -  закидывает в гитхаб изменения
+git remote add origin ssh-link
