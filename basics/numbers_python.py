@@ -11,8 +11,8 @@ number = 10.5
 print(type(number))
 print(0.1 + 0.1 + 0.1 +0.1 + 0.1 + 0.1 + 0.1 + 0.1 +0.1 + 0.1) #0.9999999999999999
 
-# from decimal import Decimal
- number = Decimal('0.1 + 0.1 + 0.1 +0.1 + 0.1 + 0.1 + 0.1 + 0.1 +0.1 + 0.1')
+from decimal import Decimal
+#  number = Decimal('0.1 + 0.1 + 0.1 +0.1 + 0.1 + 0.1 + 0.1 + 0.1 +0.1 + 0.1')
 print(int(number))
 # надо через строку
 
@@ -32,3 +32,9 @@ print(number) #(10+3j)
 # модуль числа(abs)
 # divmod целочисленное деление и остаток 
 # sqrt - нахождение квадратного корня
+
+''
+h = 513
+floor = 2.7
+print(h/floor)
+''
