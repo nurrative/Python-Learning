@@ -39,45 +39,20 @@ string5 = '''
 # метод - это функция которая принадлежит определенному типу данных
 # обращаемся к ней через точку 
 # dir(str)  - посмотреть все доступные методы для данного типа данных
-
+'''
 'hello'.center(11) #'   hello   ' 
-'hello'.center(11,-) #'---hello---' 
-"""name = input()
-last_name = input()
-age = int(input())
-city = input()
-print(f"Вас зовут : {name} {last_name}, Ваш возраст: {age}, Вы проживатете в городе  {city}")
+'hello'.center(11,'-') #'---hello---' 
 
+'hello'.count('l') #2
+'hello'.count('l'l) #1
+'Hello'.count('hello') #0
 
-string = "Hello_world"
-my_string = string[:5]+'K'+string[6:]
-print(my_string)
+'hello world'.split('') #['hello', 'world']
+'hello world'.split('o') #['hell', ' w', 'rld']
 
-string = 'MaKerS bOOtCamP'
-
-string = 'hello world'
-print((string+"\n")*3)
-
-string = 'Makers'
-# my_string = 'e'
-print(string.find('e'))
-
-string = 'Python is the best'
-my_string = string.split(' ')
-my_list = my_string[0]
-if my_list == 'Python':
-    print(True)
-else: print(False)
-
-
-
-string = 'Hello World ssssss'
-my_str = string.split(" ")
-if my_str[0:-1]=='':
-    print(my_str[1:-2])
-else :  
-    print(my_str)
-
-string = "          Как прекрасен этот мир!   "
-print(.join(string.split()))
-"""
+' '.join(['hello', 'world']) #hello world
+'%'.join(['hello', 'world']) #hello world
+'hello world'.find('w') #6
+'hello world'.find('o') #4
+'hello world'.rfind('o') #7
+'''

@@ -39,49 +39,54 @@
 # clock = AlarmClock()
 # clock.current_time() 
 # clock.alarm_on()
-class Coder:
-    count_code_time = 0
-    def get_info(self):
-        model = self.__class__
-        
-        print(f"{model} разработчик, уровень: {model(self.experience())}, потрачено {Coder.count_code_time} часов на программирование")
-    def coding(self,experience):
-        model = self.__class__
-        self.experience = experience
-        Coder.count_code_time = self.experience
-        return Coder.count_code_time
-    def __str__(self):
-        return Coder.model()
-    
-class Backend(Coder):
-    def __init__(self,experience,languages_frontend):
-        self.experience = experience
-        self.experience = super().get_info()
-        self.languages_frontend = languages_frontend
-    def __str__(self):
-        return self.experience
 
-class Frontend(Coder):
-    def __init__(self,experience,languages_frontend):
-        self.experience = experience
-        self.experience = super().get_info()
-        self.languages_frontend = languages_frontend
+# from abc import ABC,abstractmethod
+# class Coder(ABC):
+#     count_code_time = 0
+#     @abstractmethod
+#     def get_info(self):
+#         pass
+#     @abstractmethod
+#     def coding(self):
+#         pass
 
-class Fullstack(Backend,Frontend):
-    def __init__(self,experience,languages_frontend):
-        super().get.info()
-        self.experience = experience
-        
-        self.languages_frontend = languages_frontend
-    
+# class Backend(Coder):
+#     def __init__(self,experience, languages_backend):
+#         self.experience = experience
+#         self.languages_backend = languages_backend
 
-a = Backend("Junior","Python")
-# b = Frontend("Middle","Javascript")
-# c = Fullstack('Senior','Python and JS')
-print(repr(a.coding(12))) 
+#     def coding(self,hour):
+#         self.hour = hour
+#         self.count_code_time +=hour
+
+#         return self.hour
+#     def get_info(self):
+#         return f"{self.languages_backend} разработчик, уровень: {self.experience}, потрачено {self.hour} часов на программирование"
+
+# class Frontend(Coder):
+#     def __init__(self,experience,languages_frontend):
+#         self.experience = experience
+#         self.languages_frontend = languages_frontend
+
+#     def coding(self,hour):
+#         self.hour = hour
+#         self.count_code_time = hour
+#         return self.hour
+#     def get_info(self):
+#         return f"{self.languages_frontend} разработчик, уровень: {self.experience}, потрачено {self.hour} часов на программирование"
+
+# class Fullstack(Backend,Frontend):
+#     pass
+
+# a=Backend("Junior","Python")
+# b=Frontend("MIddle","Javascript")
+# c=Fullstack("Senior","Python and JS")
+# a.coding(12) 
 # b.coding(45) 
 # c.coding(17) 
-
+# print(a.get_info()) 
+# print(b.get_info()) 
+# print(c.get_info()) 
 # from abc import ABC, abstractmethod
 
 # class A(ABC):

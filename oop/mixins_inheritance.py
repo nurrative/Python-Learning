@@ -60,3 +60,48 @@ setattr(obj, 'new_attribute','hello world') -> создает атрибут с�
 # obj.fly()
 # obj.swim()
 # obj.walk()
+
+class Person:
+    def __init__(self,name):
+        self.name = name
+
+class WalkMixin:
+    def walk(self):
+        return "ходит"
+
+class Walking_Person(Person,WalkMixin):
+    pass
+obj = Walking_Person("Nursultan")
+print(f"{obj.name} {obj.walk()}")
+
+# class CustomError(Exception): 
+#    def init(self, message): 
+#       self.message = message 
+# capitals_error = CustomError('ТОЛЬКО БОЛЬШИЕ БУКВЫ РАЗРЕШЕНЫ В ЭТОМ КОДЕ')
+
+# def check_letters(message1): 
+#    if message1.isupper(): 
+#       return f'ВСЕ ОТЛИЧНО! {message1}' 
+#    else: 
+#       raise capitals_error 
+   
+# print(check_letters("asd"))
+
+t1 = 0
+s1 = 1000000
+for t in range(1, 25):
+    t2 = 24 - t
+    s = 4* t**2 + t2**2
+    if s<s1:
+        s1 = s
+        t1 = t
+print(t1, 24-t1, s1)
+
+
+        
+
+        
+        
+
+
+    

@@ -71,11 +71,3 @@
 # print(sam.name)
 # print(sam._phone_number)
 # print(sam._Person__card_number) 
-import copy
-a= [1,2,[1,2,3]]
-b = a.copy()
-a[0]=0
-a[2]=[3,4,5]
-print(a,b)
-
-
