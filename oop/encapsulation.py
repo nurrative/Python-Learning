@@ -27,6 +27,7 @@
 # person1.set_age(145)
 # print(person1.get_age())
 
+
 class A:
     @property #превратили функцию в атрибут
     def hello(self):
