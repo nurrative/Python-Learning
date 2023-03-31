@@ -641,10 +641,67 @@ print(dict_)
 
    
 
-print("password")
+# print("password")
 # try: 
 #     password = 'short' 
 #     if len(password) < 6: 
 #         raise ValueError
 # finally:
 #     print(password)
+
+# warehouse = [['B', 's'], ['e', 'u'], ['O', 'o', 'x'], ['K', 'T'], [], [], [], [], [], []] 
+# for i in warehouse: 
+#     if len(warehouse)>10 or len(i)>3: 
+#         raise ValueError()
+         
+# def to_fahrenheit(k:int)-> float:
+#     assert k>=0,"Холоднее абсолютного нуля!"
+#     temp = (k-273.15)*9/5+32
+#     return temp
+
+# print(to_fahrenheit(200))
+
+# try:
+#     import lamabimgo
+
+# except ModuleNotFoundError:
+#     print("Такого модуля нет")
+
+try:
+    def filter_comment(comment: str, banlist=[]) -> None:
+        comment_list = comment.lower().split(" ")
+
+        for i in comment_list:
+            if i in banlist:
+                raise ValueError
+            
+except ValueError:
+    print("Ваш комментарий отправлен на перепроверку, так как, возможно, содержит неблагоприятный контекст")
+
+filter_comment('Dis? recipe. is i !!UNLike!?!! really much!', ['hate', 'unlike', 'liken\'t'])
+"""19"""
+# try: 
+#     num=100000000 
+#     for i in range(0,num): 
+#         print('Nope') 
+# except KeyboardInterrupt: print('Nope')
+
+"""20"""
+# try:
+#     inp1=input()
+#     inp2=input()
+#     print(int(inp1)+int(inp2))
+# except TypeError:
+#     print(inp1+inp2)
+
+# except ValueError:
+#     print(inp1+inp2)
+"""21"""
+# try:
+#     inp=input()
+#     list1=inp.split(" ")
+#     list_=[]
+#     for i in list1:
+#         list_.append(int(i))
+# except ValueError:
+#     print("Данный элемент не является числом!")

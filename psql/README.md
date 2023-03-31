@@ -143,8 +143,111 @@ CREATE TABLE post(
 );
 ```
 
+## реализация one2one в postgres
+```sql
+CREATE TABLE author(
+    id serial PRIMARY KEY,
+    name varchar(50)
+    last_name varchar(70)
+);
+
+CREATE TABLE authobiography(
+    id serial PRIMARY KEY,
+    published date,
+    body text,
+    author_id int UNIQUE, -- чтобы создать one2one, добавляем unique
+
+    CONSTRAINT fk_author_bio
+    FOREIGN KEY (author_id) REFERENCES author(id)
+);
+```
+
+## реализация many2many в postgres
+```sql
+CREATE TABLE developer(
+    id serial PRIMARY KEY,
+    name varchar(50),
+    age int,
+    experience int
+);
+
+CREATE TABLE project(
+    id serial PRIMARY KEY,
+    title varchar(100),
+    tz text,
+    deadline date
+);
+
+CREATE TABLE dev_proj(
+    dev_id int,
+    proj_id int,
+
+    CONSTRAINT fk_dev_m2m_proj 
+    FOREIGN KEY (dev_id) REFERENCES developer (id),
+
+    CONSTRAINT fk_dev_m2m_proj
+    FOREIGN KEY (proj_id) REFERENCES project(id)
+);
+```
 # JOINS
 > **join** - инструкция, которая позволяет одним SELECT, брать данные из двух таблиц (у которых есть связанные поля)
 
 > **INNER JOIN(JOIN)** - достаются только те записи у которых есть данные в обоих таблицах
 > **FULL JOIN** - достаются все записи и с первой таблицы и со второй
+
+```sql
+SELECT * FROM blogger 
+JOIN post ON blogger.id=post.blogger_id
+```
+
+```sql
+SELECT * FROM developer
+JOIN dev_proj ON developer.id = dev_proj_id
+JOIN project ON project.id = dev_proj.proj_id;
+```
+
+## Агрегатные функции
+> все агрегатные функции используются с 'group by'
+```sql
+select customer.name, sum(product.price) from customer
+join cart on customer.id = cart.customer_id
+join product on product.id = cart.product_id
+group by (customer.id);
+```
+> **AVG** - считает среднее значение всех записей в сгруппированном поле
+
+```sql
+select customer.name, avg(product.price) from customer
+join cart on customer.id = cart.customer_id
+join product on product.id = cart.product_id
+group by (customer.id);
+```
+
+> **ARR_AGG** - Собирает значение всех х
+
+>**MIN/MAX** - выбирает минимальное/максимальное значение из всех записей в сгрупиррованном поле
+```sql
+select blogger.name,max(post.created_at) 
+from blogger 
+join post on blogger.id = post.blogger_id 
+group by (blogger.id);
+--    name    | count 
+-- -----------+-------
+--  blogger 2 |     2
+--  blogger 3 |     1
+--  blogger 1 |     3
+-- (3 rows)
+```
+
+# Import/Export баз данных
+
+write from file to db
+```bash
+psql db_name < file.sql
+# при этом db_name должна сущуствовать
+```
+
+write from db to file
+```bash
+pg_dump db_name > file.sql
+```

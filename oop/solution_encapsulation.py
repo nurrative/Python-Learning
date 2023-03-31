@@ -157,11 +157,99 @@
 # print(game.get_level())
 
  
-class Game:
-    __level=0
-    @property
-    def level(self):
-        return self.__level
+# class Game:
+#     __level=0
+#     def __init__(self,name):
+#         self.name = self.__validate_name(name)
 
-game = Game()
-print(game.level)
+#     def set_level(self,x):
+#         if self.name=="Tolik":
+#             self.__level=x
+#         else:
+#             print(f"{self.name} ты не Tolik!")
+
+#     def __validate_name(self,name):
+#         return name.title()
+    
+#     def get_level(self):
+#         return self.__level
+
+# game = Game("Raychel")
+# game.set_level(5)
+# print(Game._Game__level)
+# game2 = Game("Tolik")
+# game2.set_level(5)
+# print(game2._Game__level)
+
+# class Game:
+#     __level = 0
+#     @property
+#     def get_level(self):
+#         return self.__level
+#     @get_level.setter
+#     def level(self,number):
+#         self.__level=number
+# game = Game()
+# print(game.get_level)
+# game.level=10
+# print(game.get_level)
+
+# class Person:
+#     def __init__(self):
+#         self.__name=None
+#         self.__last_name=None
+#         self.__age=None
+#         self.__email =None
+#     @property
+#     def name(self):
+#         return self.__name
+#     @property
+#     def last_name(self):
+#         return self.__last_name    
+#     @property
+#     def age(self):
+#         return self.__age    
+#     @property
+#     def email(self):
+#         return self.__email
+#     @name.setter
+#     def name(self,value):
+#         self.__name = value
+#     @last_name.setter 
+#     def last_name(self, value): 
+#         self.__last_name = value 
+#     @age.setter 
+#     def age(self, value): 
+#         self.__age = value 
+#     @email.setter 
+#     def email(self, value): 
+#         self.__email= value 
+
+# john = Person()
+# john.name = 'John'
+# john.last_name = 'Snow'
+# john.age = 30
+# john.email = 'johnsnow@gmail.com'
+# print(john.name,john.last_name,john.age,john.email) # John Snow 30 johnsnow@gmail.com
+
+# class Dad: 
+#     name = 'John' 
+#     _last_name = 'Snow' 
+#     __age = 40 
+
+# class Dad: 
+#     name = 'John' 
+#     _last_name = 'Snow' 
+#     __age = 40 
+
+# class Me(Dad): 
+#     name = 'Sam'
+#     __age = 10 
+#     def about_me(self): 
+#         print(f"My name is {self.name} {self._last_name} and I am {self._Me__age} years old") 
+#     def about_my_father(self): 
+#         print(f"My father is {super().name} {super()._last_name}") 
+# me = Me() 
+# me.about_me() 
+# me.about_my_father()
+
