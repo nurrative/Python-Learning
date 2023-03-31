@@ -112,14 +112,16 @@ class Student:
 #         self.string = string
 #         print(self.string[-1:])
 #     def __eq__(self,other):
-#         if self.string[-1]==other.string:
+#         if self.string[::-1]==other.string:
 #             return True
 #         else:
 #             return False
         
+#     def __mul__(self,i):
+#         return self.string[::-1]*i
+        
 # word1 = Anagram('hello') 
 # word2 = Anagram('olleh') 
 # print(word1 == word2)
-
-h='hello'
-print(h[-1:-5])
+# print(word1 * 3) 
+# True since 1,3 and 4 (at least one) is true

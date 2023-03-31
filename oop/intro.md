@@ -22,3 +22,5 @@ class A:
 
     def __init__(self):
         self.var2 = 'переменная обьекта'
+
+
