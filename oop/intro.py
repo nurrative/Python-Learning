@@ -2,21 +2,21 @@ class Person:
     # переменные внутри класса-атрибуты
     arms = 2
     legs = 2
-    name = "Nursultan"
+
 
     #функции внутри класса - методы
-    # def __init__(self) -> None:
-    #     print("asd")
+    def __init__(self,name) -> None:
+        print("asd")
         # __init__ -dunder метод, который добавляет в обьект self 
         # атрибуты которые отличаются у разных обьектов 
-        # self.name = name
+        self.name = name
 
     def walk(self):
         # self - ссылка на обьект, у которого мы вызываем данный метод
         # print(self) 
         print('я хожу') 
 
-person1 = Person() 
+person1 = Person('Nursultan') 
 # print(dir(str))
 # print(dir(person1))
 # print(__name__)
@@ -65,3 +65,22 @@ print(A.var1) #переменная класса
 print(obj.var1) #переменная класса
 print(obj.var2) #переменная обьекта
 
+# def make_bold(func):
+#     return f'<b>{func()}</b>' 
+
+
+# def make_italic(func):
+#     return f'<i>{func()}</i>'
+
+
+def make_underline(func):
+    string=(f"asd{func()}")
+    return string
+
+# @make_bold
+# @make_italic
+@make_underline
+def hello():
+    return 'Hello world'
+ 
+print(hello())

@@ -31,18 +31,18 @@ res = decorator(func)
 
 from datetime import datetime
 
-def timer(func):
-    def wrapper(*args,**kwargs):
-        start = datetime.now()
-        res = func(*args,**kwargs)
-        end = datetime.now()
-        print(f"Функция отработала за {end-start}")
-        return res
-    return wrapper
+# def timer(func):
+#     def wrapper(*args,**kwargs):
+#         start = datetime.now()
+#         res = func(*args,**kwargs)
+#         end = datetime.now()
+#         print(f"Функция отработала за {end-start}")
+#         return res
+#     return wrapper
 
 from functools import cache
 
-@timer
+# @timer
 @cache
 def func(count):
     return(sum(range(count)))
@@ -50,18 +50,19 @@ def func(count):
 print(func(10000000))
 
 from datetime import datetime
-def func_start_time(func):
-    def wrapper():
-        now = datetime.now()
-        formatted = now.strftime("%d.%m.%Y %H:%M:%S")
-        print(f"Функция запущена {formatted}")
-        func()
+def benchmark(func):
+    def wrapper(*args,**kwargs):
+        start = datetime.now()
+        res = func(*args,**kwargs)
+        end = datetime.now()
+        print(f"Время выполнения: {end-start} секунд")
+        return res
     return wrapper
 
-@func_start_time
-def func():
-    print('Hello world')
-func()
+@benchmark 
+def fetch_webpage(): 
+  import requests 
+  webpage = requests.get('https://google.com')  
 
-
+print(fetch_webpage())
 

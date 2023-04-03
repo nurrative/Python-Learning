@@ -667,18 +667,18 @@ print(dict_)
 # except ModuleNotFoundError:
 #     print("Такого модуля нет")
 
-try:
-    def filter_comment(comment: str, banlist=[]) -> None:
-        comment_list = comment.lower().split(" ")
+# try:
+#     def filter_comment(comment: str, banlist=[]) -> None:
+#         comment_list = comment.lower().split(" ")
 
-        for i in comment_list:
-            if i in banlist:
-                raise ValueError
+#         for i in comment_list:
+#             if i in banlist:
+#                 raise ValueError
             
-except ValueError:
-    print("Ваш комментарий отправлен на перепроверку, так как, возможно, содержит неблагоприятный контекст")
+# except ValueError:
+#     print("Ваш комментарий отправлен на перепроверку, так как, возможно, содержит неблагоприятный контекст")
 
-filter_comment('Dis? recipe. is i !!UNLike!?!! really much!', ['hate', 'unlike', 'liken\'t'])
+# filter_comment('Dis? recipe. is i !!UNLike!?!! really much!', ['hate', 'unlike', 'liken\'t'])
 """19"""
 # try: 
 #     num=100000000 
@@ -705,3 +705,67 @@ filter_comment('Dis? recipe. is i !!UNLike!?!! really much!', ['hate', 'unlike',
 #         list_.append(int(i))
 # except ValueError:
 #     print("Данный элемент не является числом!")
+
+# dict_ = {'Timur': {'history': 90, 'math': 95, 'literature': 91},
+ 
+# 'Olga': {'history': 92, 'math': 96, 'literature': 81},
+ 
+#  'Nik': {'history': 84, 'math': 85, 'literature': 87}}
+
+# dict1 = {"Sedan": 1500, "SUV": 2000, "Pickup": 2500, "Miivan": 1600, "Vann": 2400, "Semi": 13600, "Bicycle": 7, "Motorcycle": 110}
+# dict2 = {k.replace('i',''):k.count('i') for k in dict1.keys()}
+# print(dict2)
+
+
+
+dict_ = {
+    'Dasha': {
+        'likes': 15,
+        'comments': [
+            {'id': 1, 'text': 'some text'},
+            {'id': 2, 'text': 'some text'},
+        ],
+        'rating': 2
+    },
+    'Luna': {
+        'likes': 12,
+        'comments': [
+            {'id': 1, 'text': 'some text'},
+            {'id': 2, 'text': 'some text'},
+            {'id': 3, 'text': 'some text'},
+        ],
+        'rating': 1
+    },
+    'Rena': {
+        'likes': 26,
+        'comments': [
+            {'id': 1, 'text': 'some text'},
+            {'id': 2, 'text': 'some text'},
+            {'id': 3, 'text': 'some text'},
+            {'id': 4, 'text': 'some text'},
+            {'id': 5, 'text': 'some text'},
+            {'id': 6, 'text': 'some text'},
+        ],
+        'rating': 2
+    }
+}
+
+# list_ = [value_inner['id'] for value in dict_.values() for value_inner in value['comments'] if len(value['comments'])>3]
+# dict1 = [b['id'] for value in dict_.values() for b in value['comments'] if len(value['comments']) > 3] 
+# print(list_)
+
+
+
+dict_ = {'Timur': {'history': 90, 'math': 95, 'literature': 91},
+ 
+'Olga': {'history': 92, 'math': 96, 'literature': 81},
+ 
+ 'Nik': {'history': 84, 'math': 85, 'literature': 87}}
+
+res = {k:k1 for k,v in dict_.items() for k1,v1 in v.items() if v1==max(v.values())}
+print(res)
+
+string_ = 'In 1984 there were 13 instances of a protest with over 1000 people attending'
+list_=[x for x in string_.split(" ") if x.isdigit()]
+print(list_)
+
