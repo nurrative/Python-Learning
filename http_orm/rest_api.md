@@ -20,3 +20,4 @@ ORM - object relational mapping библиотека, которая являе�
 sqlachemy??
 peewee???
 django orm???
+???
