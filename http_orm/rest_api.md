@@ -16,8 +16,8 @@
 * Предоставление кода по запросу (Code on Demand)
 * Начало от нуля (Starting with the Null Style)
 
-ORM - object relational mapping библиотека, которая является переводччиком между sql и ЯП (python,java и т.д.)
+<!-- ORM - object relational mapping библиотека, которая является переводччиком между sql и ЯП (python,java и т.д.)
 sqlachemy
 peewee
 django orm
- 
+  -->
