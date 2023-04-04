@@ -769,3 +769,5 @@ string_ = 'In 1984 there were 13 instances of a protest with over 1000 people at
 list_=[x for x in string_.split(" ") if x.isdigit()]
 print(list_)
 
+x=list(filter(lambda x:x.isdigit(),string_.split(" ")))
+print(x)

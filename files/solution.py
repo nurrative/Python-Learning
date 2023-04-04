@@ -254,5 +254,5 @@ import json
 res=['asd','qwerty','asdasdasdasd','dsa']
 answer = list(
     filter(lambda x: len(x)>3,
-           map(lambda x:x.upper(),res)))
+           map(lambda x:x.title(),res)))
 print(answer)
