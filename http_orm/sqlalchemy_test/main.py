@@ -39,9 +39,9 @@ new_product = Product(title = 'product1',price = 120)
 # session.commit()
 # отправляем набор запросов бд
 
-# products = session.query(Product).all()
-# # получаем все записи из таблиы product
-# print(products)
+products = session.query(Product).all()
+# получаем все записи из таблиы product
+print(products)
 
 # session.add(Product(title='product2', price=34))
 # session.add(Product(title='product3', price=245))
@@ -68,8 +68,4 @@ product3.title = 'new title'
 product3.price = 100
 
 session.commit()
-
-products = session.query(Product).all()
-# получаем все записи из таблиы product
-print(products)
 
