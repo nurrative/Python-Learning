@@ -100,4 +100,3 @@ class D(B,A):
 # order (MRO) for bases A, B
 
     
-

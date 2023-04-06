@@ -61,3 +61,5 @@ a=Backend("Junior","Python")
 a.coding(12) 
 print(a.get_info())
 
+NotImplementedError
+

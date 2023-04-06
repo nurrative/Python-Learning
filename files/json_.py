@@ -1,5 +1,5 @@
 "=====================================JSON========================================"
-# JavaScript Object Notation - tдиный формат, в котором храниться только те типы 
+# JavaScript Object Notation - единый формат, в котором храниться только те типы 
 # данных, которые есть во всех яп поддерживаемые json
 
 #  числа int, float
@@ -12,8 +12,8 @@
 import json
 
 # сериализация - перевод из python в json
-# dump
-# dumps - функция, которая переводит python obj в json строку
+# dumps - метод для сериализации в json строку
+# dump - метод для сериализации в json файл
 
 python_list = [1,2,3]
 json_list = json.dumps(python_list)
@@ -34,8 +34,8 @@ with open('test.json','w') as file:
 
 
 # десериализация - перевод из json в python
-# load
-# loads
+# loads - метод для десериализации с json строки
+# load - метод для десериализации с json файла
 
 
 json_dict = '{"a":1,"b":2}'

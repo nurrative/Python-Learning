@@ -1,7 +1,4 @@
-product1 5 1126
-product2 2 100
-product3 18 23
-product4 4 356
-product5 20 73
-product6 23 103
-product7 45 975
+aaalo
+Makers
+Hello
+World
