@@ -1,23 +1,24 @@
-# class RadioMixin:
-#     def play_music(self,title):
-#         print(f"Песня называется {title}")
+class RadioMixin:
+    def play_music(self,title):
+        print(f"Песня называется {title}")
 
-# class Auto(RadioMixin):
-#     def ride(self):
-#         print('Riding on a ground')
+class Auto(RadioMixin):
+    def ride(self):
+        print('Riding on a ground')
 
-# class Boat(RadioMixin):
-#     def swim(self):
-#         print('Floating on water')
+class Boat(RadioMixin):
+    def swim(self):
+        print('Floating on water')
 
-# class  Amphibian(Auto,Boat):
-#     pass
-# obj = Amphibian() 
-# auto = Auto()
-# boat = Boat()
-# auto.play_music("Dirty")
-# boat.play_music("Amsterdam")
-# obj.play_music("Umbrella")
+class  Amphibian(Auto,Boat):
+    pass
+obj = Amphibian() 
+auto = Auto()
+boat = Boat()
+auto.play_music("Dirty")
+boat.play_music("Amsterdam")
+obj.play_music("Umbrella")
+
 
 # from datetime import datetime
 # class Clock:

@@ -31,9 +31,9 @@ class B(A):
         return_from_super = super().method()
         print("super().method() вернул", return_from_super)
         return "BBB"
-obj_a = A()
-res_a = obj_a.method()
-print('A.method вернул', res_a)
+# obj_a = A()
+# res_a = obj_a.method()
+# print('A.method вернул', res_a)
 
 obj_b = B()
 res_b = obj_b.method()
