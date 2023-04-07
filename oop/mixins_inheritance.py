@@ -30,7 +30,7 @@ class Exocoetidae(SwimMixin, FlyMixin):
 class Duck(WalkMixin,SwimMixin, FlyMixin):
     name = 'утка'
 
-"""
+
 objects =[Human(), Fish(),Exocoetidae(), Duck()]
 for obj in objects:
     # print(obj.name)
@@ -40,13 +40,13 @@ for obj in objects:
             method = getattr(obj,attr)
             method() 
 
-print(hasattr(obj,'fly')) -> есть ли метод у этого класса(1-обьект, 2-атрибут)
+print(hasattr(obj,'fly'))# -> есть ли метод у этого класса(1-обьект, 2-атрибут)
 
-print(getattr(obj,'walk'))<bound method WalkMixin.walk of <__main__.Human object at 0x1030eded0>>
+print(getattr(obj,'walk'))#<bound method WalkMixin.walk of <__main__.Human object at 0x1030eded0>>
 method = getattr(obj,'name')
-str(method())
-setattr(obj, 'new_attribute','hello world') -> создает атрибут со значением
-"""
+
+setattr(obj, 'new_attribute','hello world')# -> создает атрибут со значением
+
 # hasattr - функция, которая принимает обьект и название атрибута. Возвращает True,
 # если у обьекта есть такой атрибут(метод)
 # getattr - функция, которая принимает обьект и название атрибута. Возвращает значение атрибута

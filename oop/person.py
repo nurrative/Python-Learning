@@ -13,4 +13,4 @@ class Developer(Person):
 
 
 developer1 = Developer("Marat", 20,"Backend")
-# developer2 = 
+print(developer1.name)
