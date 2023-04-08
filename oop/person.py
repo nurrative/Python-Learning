@@ -3,6 +3,8 @@ class Person():
         self.name = name
         self.age = age
 
+    class Woman:
+        pass
 class Developer(Person):
     def __init__(self,name,age,developer):
         
@@ -11,6 +13,23 @@ class Developer(Person):
         
         print(f"Имя {self.name} Возраст: {self.age} Разработчик: {self.developer}" , )
 
+    def move(self):
+        print("хожу")
+
 
 developer1 = Developer("Marat", 20,"Backend")
-print(developer1.name)
+developer1.move()
+
+class A:
+    _name='aasd'
+
+class B(A):
+    pass
+
+class C(B):
+    pass
+
+c = C()
+
+print(c._name)
+
