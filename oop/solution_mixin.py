@@ -1,23 +1,23 @@
-class RadioMixin:
-    def play_music(self,title):
-        print(f"Песня называется {title}")
+# class RadioMixin:
+#     def play_music(self,title):
+#         print(f"Песня называется {title}")
 
-class Auto(RadioMixin):
-    def ride(self):
-        print('Riding on a ground')
+# class Auto(RadioMixin):
+#     def ride(self):
+#         print('Riding on a ground')
 
-class Boat(RadioMixin):
-    def swim(self):
-        print('Floating on water')
+# class Boat(RadioMixin):
+#     def swim(self):
+#         print('Floating on water')
 
-class  Amphibian(Auto,Boat):
-    pass
-obj = Amphibian() 
-auto = Auto()
-boat = Boat()
-auto.play_music("Dirty")
-boat.play_music("Amsterdam")
-obj.play_music("Umbrella")
+# class  Amphibian(Auto,Boat):
+#     pass
+# obj = Amphibian() 
+# auto = Auto()
+# boat = Boat()
+# auto.play_music("Dirty")
+# boat.play_music("Amsterdam")
+# obj.play_music("Umbrella")
 
 
 # from datetime import datetime
@@ -175,14 +175,8 @@ def kk(x):
 
         return x
 list1 = list(filter(kk, list_))
-
 print(list1)
 
-
 list_ = [-7, -2, 12, 32, 432, 23, 37, 11, 76, -23, 0, 45, -32, -56]
-
-def kk(x):
-    return x >= 0
-
-list1 = list(filter(kk, list_))
+list1 = list(filter(lambda x: x>=0, list_))
 print(list1)
