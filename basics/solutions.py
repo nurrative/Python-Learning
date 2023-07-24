@@ -134,11 +134,18 @@
 # y=lists[(my_list[-1])+1]
 # print(y)
 # print(type(len(lists)))
-list_ = ['dlrow', 'olleh']
-res = [x[::-1] for x in list_[::-1]]
-print(res)
+# list_ = ['dlrow', 'olleh']
+# res = [x[::-1] for x in list_[::-1]]
+# print(res)
 
-result=[]
-for i in list_[::-1]:
-    result.append(i[::-1])
-print(result)
+# result=[]
+# for i in list_[::-1]:
+#     result.append(i[::-1])
+# print(result)
+
+def searchInsert(nums, target):
+    return len(list(x for x in nums if x<target))
+    
+nums = [1,3,5,6]
+target = 5
+print(searchInsert(nums,target))
